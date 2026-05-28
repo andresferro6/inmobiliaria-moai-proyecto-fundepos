@@ -4,86 +4,279 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MOAI Inmobiliaria</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background:#f5f5f5; color:#111; }
-    .hero { min-height:100vh; background:linear-gradient(135deg,#111,#2b2b2b,#b00020); color:white; display:flex; align-items:center; }
-    .btn-red { background:#b00020; color:white; border-radius:50px; padding:15px 32px; font-weight:700; text-decoration:none; }
-    .btn-red:hover { background:#870018; color:white; }
-    .card-moai { border:0; border-radius:24px; box-shadow:0 15px 40px rgba(0,0,0,.08); padding:30px; height:100%; }
-    .section-title { color:#b00020; font-weight:900; }
-    footer { background:#111; color:white; padding:30px 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #111;
+    }
+
+    .navbar {
+      background: rgba(0,0,0,.95);
+    }
+
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #111 0%, #2b2b2b 50%, #b00020 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 120px 0;
+    }
+
+    .btn-red {
+      background: #b00020;
+      color: white;
+      border-radius: 50px;
+      padding: 16px 32px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .btn-red:hover {
+      background: #870018;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .glass-card {
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      padding: 40px;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.08);
+      height: 100%;
+      transition: .3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .section-title {
+      color: #b00020;
+      font-weight: 900;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 40px 0;
+    }
   </style>
 </head>
+
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold text-danger" href="index.html">
+      MOAI Inmobiliaria
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMoai">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMoai">
+
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">
+            Inicio
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="descuento.html">
+            Promoción
+          </a>
+        </li>
+
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+          <a
+            href="https://wa.me/573113642529"
+            target="_blank"
+            class="btn btn-danger rounded-pill px-4 fw-bold">
+            WhatsApp
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
 
 <section class="hero">
   <div class="container">
+
     <div class="row align-items-center g-5">
+
       <div class="col-lg-7">
-        <span class="badge bg-danger px-4 py-2 rounded-pill mb-3">MOAI Inmobiliaria</span>
-        <h1 class="display-3 fw-bold mb-4">Más que vender propiedades, construimos confianza.</h1>
-        <p class="lead mb-4">
-          Somos una inmobiliaria moderna en Medellín enfocada en propietarios, inversionistas y compradores que buscan seguridad, acompañamiento y resultados reales.
+
+        <span class="badge bg-danger px-4 py-2 rounded-pill mb-4">
+          Inmobiliaria Premium en Medellín
+        </span>
+
+        <h1 class="display-2 fw-bold mb-4">
+          Más que vender propiedades, construimos confianza.
+        </h1>
+
+        <p class="lead mb-5">
+          En MOAI te ayudamos a comprar, vender y administrar inmuebles con una experiencia moderna, segura y enfocada en valorización patrimonial.
         </p>
-        <a href="descuento.html" class="btn-red">Ver promoción exclusiva</a>
+
+        <a href="descuento.html" class="btn-red">
+          Ver promoción exclusiva
+        </a>
+
       </div>
+
       <div class="col-lg-5">
-        <div class="bg-white text-dark p-5 rounded-5 shadow-lg">
-          <h2 class="fw-bold text-danger">Tu patrimonio merece una gestión premium</h2>
-          <p class="mt-3">
-            Te acompañamos en compra, venta, arriendo, administración y asesoría inmobiliaria con procesos claros y atención personalizada.
-          </p>
-          <a href="descuento.html" class="btn btn-dark rounded-pill px-4 mt-3">Quiero mi beneficio</a>
+
+        <div class="glass-card">
+
+          <h2 class="fw-bold mb-4">
+            ¿Por qué elegir MOAI?
+          </h2>
+
+          <ul class="list-unstyled fs-5">
+
+            <li class="mb-3">✅ Atención personalizada</li>
+            <li class="mb-3">✅ Procesos transparentes</li>
+            <li class="mb-3">✅ Estrategias digitales modernas</li>
+            <li class="mb-3">✅ Acompañamiento legal y comercial</li>
+            <li class="mb-3">✅ Enfoque premium e inversionista</li>
+
+          </ul>
+
+          <a href="descuento.html" class="btn btn-light rounded-pill px-4 mt-3 fw-bold">
+            Reclamar descuento
+          </a>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
 </section>
 
 <section class="py-5 bg-white">
   <div class="container">
+
     <div class="text-center mb-5">
-      <h2 class="section-title">¿Qué hace MOAI?</h2>
-      <p class="text-muted">Soluciones inmobiliarias integrales para proteger y valorizar tu patrimonio.</p>
+
+      <h2 class="section-title display-5">
+        Servicios MOAI
+      </h2>
+
+      <p class="text-muted">
+        Soluciones inmobiliarias modernas y estratégicas.
+      </p>
+
     </div>
 
     <div class="row g-4">
+
       <div class="col-md-4">
-        <div class="card-moai">
-          <h4 class="fw-bold">Compra y venta</h4>
-          <p>Te asesoramos para comprar o vender inmuebles con estrategia, seguridad y respaldo comercial.</p>
+
+        <div class="feature-card">
+
+          <h4 class="fw-bold mb-3">Compra y venta</h4>
+
+          <p>
+            Te ayudamos a comercializar propiedades con estrategias profesionales y máxima visibilidad.
+          </p>
+
         </div>
+
       </div>
+
       <div class="col-md-4">
-        <div class="card-moai">
-          <h4 class="fw-bold">Arrendamiento</h4>
-          <p>Administramos propiedades con enfoque en tranquilidad, rentabilidad y protección para el propietario.</p>
+
+        <div class="feature-card">
+
+          <h4 class="fw-bold mb-3">Administración</h4>
+
+          <p>
+            Gestión integral de inmuebles con enfoque en rentabilidad y tranquilidad.
+          </p>
+
         </div>
+
       </div>
+
       <div class="col-md-4">
-        <div class="card-moai">
-          <h4 class="fw-bold">Inversión inmobiliaria</h4>
-          <p>Te ayudamos a identificar oportunidades con potencial de valorización y generación de ingresos.</p>
+
+        <div class="feature-card">
+
+          <h4 class="fw-bold mb-3">Inversión inmobiliaria</h4>
+
+          <p>
+            Identificamos oportunidades con potencial de valorización y retorno.
+          </p>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
 </section>
 
-<section class="py-5" style="background:#f1f1f1;">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-3">Tenemos una promoción activa para nuevos clientes</h2>
-    <p class="lead mb-4">Accede a un descuento especial sobre tu primera compra.</p>
-    <a href="descuento.html" class="btn-red">Reclamar descuento ahora</a>
+<section class="py-5 text-center" style="background:#f1f1f1;">
+  <div class="container">
+
+    <h2 class="display-5 fw-bold mb-3">
+      Tenemos una promoción exclusiva activa
+    </h2>
+
+    <p class="lead mb-4">
+      Accede ahora a un descuento especial sobre tu primera compra.
+    </p>
+
+    <a href="descuento.html" class="btn-red">
+      Ver descuento
+    </a>
+
   </div>
 </section>
 
 <footer class="text-center">
-  <h5 class="fw-bold">MOAI Inmobiliaria</h5>
-  <p class="mb-0">Confianza, estrategia y valorización patrimonial.</p>
+
+  <div class="container">
+
+    <h5 class="fw-bold">
+      MOAI Inmobiliaria
+    </h5>
+
+    <p class="mb-0">
+      Confianza • Patrimonio • Inversión
+    </p>
+
+  </div>
+
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
