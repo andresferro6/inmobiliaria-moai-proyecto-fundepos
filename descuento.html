@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Promoción 20% | MOAI Inmobiliaria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { font-family:'Segoe UI', sans-serif; background:#111; color:white; }
+    .hero {
+      min-height:100vh;
+      background:linear-gradient(135deg,#111 0%,#280000 45%,#b00020 100%);
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .mega-banner {
+      background:#b00020;
+      color:white;
+      text-align:center;
+      padding:18px;
+      font-size:1.3rem;
+      font-weight:900;
+      letter-spacing:.5px;
+      position:sticky;
+      top:0;
+      z-index:9999;
+      box-shadow:0 8px 25px rgba(0,0,0,.4);
+    }
+
+    .discount {
+      font-size:7rem;
+      font-weight:1000;
+      color:white;
+      line-height:1;
+      text-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .timer-box {
+      background:white;
+      color:#111;
+      border-radius:30px;
+      padding:35px;
+      box-shadow:0 20px 60px rgba(0,0,0,.45);
+      border:6px solid #b00020;
+    }
+
+    .timer-number {
+      font-size:4.5rem;
+      font-weight:1000;
+      color:#b00020;
+      line-height:1;
+    }
+
+    .btn-whatsapp {
+      background:#25D366;
+      color:white;
+      border-radius:60px;
+      padding:20px 38px;
+      font-size:1.2rem;
+      font-weight:900;
+      text-decoration:none;
+      display:inline-block;
+      box-shadow:0 12px 30px rgba(37,211,102,.35);
+      animation:pulse 1.2s infinite;
+    }
+
+    .btn-whatsapp:hover { background:#1ebe5d; color:white; }
+
+    .pressure-card {
+      background:#fff;
+      color:#111;
+      border-radius:25px;
+      padding:28px;
+      height:100%;
+      border-top:8px solid #b00020;
+    }
+
+    .floating-cta {
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      right:20px;
+      background:#b00020;
+      color:white;
+      border-radius:22px;
+      padding:18px;
+      z-index:9999;
+      box-shadow:0 10px 35px rgba(0,0,0,.45);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:15px;
+    }
+
+    @keyframes pulse {
+      0% { transform:scale(1); }
+      50% { transform:scale(1.04); }
+      100% { transform:scale(1); }
+    }
+
+    @media(max-width:768px) {
+      .discount { font-size:4.5rem; }
+      .timer-number { font-size:3rem; }
+      .floating-cta { flex-direction:column; text-align:center; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="mega-banner">
+  ⚠️ OFERTA ACTIVA AHORA: 20% DE DESCUENTO SOLO DURANTE LOS PRÓXIMOS MINUTOS
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <span class="badge bg-light text-danger px-4 py-2 rounded-pill mb-3 fw-bold">
+          Promoción exclusiva nuevos clientes
+        </span>
+
+        <h1 class="display-2 fw-bold mb-4">
+          Reclama tu descuento antes de que expire
+        </h1>
+
+        <p class="lead mb-4">
+          Escríbenos por WhatsApp ahora y recibe un <strong>20% de descuento sobre tu primera compra</strong> con MOAI Inmobiliaria.
+        </p>
+
+        <div class="discount mb-4">20% OFF</div>
+
+        <a href="https://wa.me/573113642529?text=Hola%20MOAI%2C%20quiero%20reclamar%20mi%2020%25%20de%20descuento%20sobre%20mi%20primera%20compra"
+           target="_blank"
+           class="btn-whatsapp">
+          Reclamar mi descuento ahora
+        </a>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="timer-box text-center">
+          <h3 class="fw-bold text-danger">Tu promoción termina en:</h3>
+          <div id="mainTimer" class="timer-number my-3">05:00</div>
+          <p class="fw-bold mb-2">Después de este tiempo, el descuento puede no estar disponible.</p>
+          <a href="https://wa.me/573113642529?text=Hola%20MOAI%2C%20quiero%20mi%20descuento%20antes%20de%20que%20termine%20la%20promoci%C3%B3n"
+             target="_blank"
+             class="btn btn-dark btn-lg rounded-pill px-4 mt-3">
+            Asegurar promoción
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light text-dark">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-danger">¿Por qué debes escribir ahora?</h2>
+      <p class="lead">Esta oferta está diseñada para motivar una decisión rápida.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="pressure-card">
+          <h4 class="fw-bold">Beneficio inmediato</h4>
+          <p>El descuento aplica sobre tu primera compra al escribir por WhatsApp durante la promoción activa.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="pressure-card">
+          <h4 class="fw-bold">Atención prioritaria</h4>
+          <p>Quienes reclamen el descuento podrán recibir orientación personalizada más rápido.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="pressure-card">
+          <h4 class="fw-bold">Oferta limitada</h4>
+          <p>El contador está activo. Cuando llegue a cero, la promoción dejará de mostrarse como disponible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 text-center" style="background:#b00020;">
+  <div class="container">
+    <h2 class="display-5 fw-bold mb-3">No dejes pasar tu 20% de descuento</h2>
+    <p class="lead mb-4">Haz clic ahora y escríbenos antes de que finalice el tiempo.</p>
+    <a href="https://wa.me/573113642529?text=Hola%20MOAI%2C%20quiero%20aprovechar%20la%20promoci%C3%B3n%20del%2020%25"
+       target="_blank"
+       class="btn-whatsapp">
+      Escribir a WhatsApp
+    </a>
+  </div>
+</section>
+
+<div class="floating-cta" id="floatingCta">
+  <div>
+    <strong>🔥 Última oportunidad</strong><br>
+    Tu 20% expira en <span id="floatingTimer">05:00</span>
+  </div>
+  <a href="https://wa.me/573113642529?text=Hola%20MOAI%2C%20quiero%20mi%2020%25%20de%20descuento"
+     target="_blank"
+     class="btn btn-light text-danger fw-bold rounded-pill px-4">
+    Reclamar ahora
+  </a>
+</div>
+
+<script>
+  let tiempo = 5 * 60;
+
+  const mainTimer = document.getElementById("mainTimer");
+  const floatingTimer = document.getElementById("floatingTimer");
+  const floatingCta = document.getElementById("floatingCta");
+
+  function actualizarTimer() {
+    const minutos = Math.floor(tiempo / 60);
+    const segundos = tiempo % 60;
+
+    const formato = `${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+
+    mainTimer.textContent = formato;
+    floatingTimer.textContent = formato;
+
+    if (tiempo <= 60) {
+      mainTimer.style.color = "#ff0000";
+      floatingCta.style.background = "#000";
+      floatingCta.style.border = "3px solid #ff0000";
+    }
+
+    if (tiempo <= 0) {
+      clearInterval(intervalo);
+      mainTimer.textContent = "00:00";
+      floatingCta.innerHTML = `
+        <div>
+          <strong>⚠️ Promoción finalizada</strong><br>
+          Escríbenos para consultar si aún hay disponibilidad.
+        </div>
+        <a href="https://wa.me/573113642529?text=Hola%20MOAI%2C%20quiero%20consultar%20si%20la%20promoci%C3%B3n%20sigue%20disponible"
+           target="_blank"
+           class="btn btn-light text-danger fw-bold rounded-pill px-4">
+          Consultar
+        </a>
+      `;
+    }
+
+    tiempo--;
+  }
+
+  actualizarTimer();
+  const intervalo = setInterval(actualizarTimer, 1000);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
