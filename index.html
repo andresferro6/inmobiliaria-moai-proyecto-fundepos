@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOAI Inmobiliaria | Premium Real Estate Medellín</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --rojo:#B11226;
+      --rojo-dark:#7D0C1B;
+      --gris:#2B2B2B;
+      --gris-light:#F5F5F5;
+      --negro:#111111;
+      --blanco:#FFFFFF;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Montserrat', sans-serif;
+    }
+
+    body{
+      background:var(--blanco);
+      color:var(--gris);
+      overflow-x:hidden;
+    }
+
+    .navbar{
+      background:rgba(17,17,17,0.95);
+      backdrop-filter:blur(10px);
+      padding:18px 0;
+    }
+
+    .navbar-brand{
+      color:white;
+      font-weight:800;
+      letter-spacing:2px;
+      font-size:1.5rem;
+    }
+
+    .navbar-brand span{
+      color:var(--rojo);
+    }
+
+    .hero{
+      min-height:100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.75)),
+        url('https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1974&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      position:relative;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:linear-gradient(135deg, rgba(177,18,38,0.25), transparent 40%);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      color:white;
+    }
+
+    .hero-subtitle{
+      color:#d6d6d6;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      font-size:0.9rem;
+      margin-bottom:20px;
+    }
+
+    .hero h1{
+      font-size:4.5rem;
+      font-weight:800;
+      line-height:1.05;
+      margin-bottom:25px;
+    }
+
+    .hero h1 span{
+      color:var(--rojo);
+    }
+
+    .hero p{
+      font-size:1.15rem;
+      color:#ececec;
+      max-width:700px;
+      line-height:1.8;
+    }
+
+    .btn-moai{
+      background:var(--rojo);
+      border:none;
+      color:white;
+      padding:16px 34px;
+      border-radius:50px;
+      font-weight:700;
+      text-decoration:none;
+      display:inline-block;
+      transition:0.3s ease;
+      box-shadow:0 10px 30px rgba(177,18,38,0.35);
+    }
+
+    .btn-moai:hover{
+      background:var(--rojo-dark);
+      transform:translateY(-3px);
+      color:white;
+    }
+
+    .offer-box{
+      background:linear-gradient(135deg,var(--rojo),var(--rojo-dark));
+      color:white;
+      border-radius:30px;
+      padding:40px;
+      margin-top:-80px;
+      position:relative;
+      z-index:5;
+      box-shadow:0 25px 60px rgba(0,0,0,0.2);
+    }
+
+    .offer-number{
+      font-size:5rem;
+      font-weight:800;
+      line-height:1;
+    }
+
+    .section{
+      padding:110px 0;
+    }
+
+    .section-title{
+      font-size:3rem;
+      font-weight:800;
+      color:var(--negro);
+      margin-bottom:20px;
+    }
+
+    .section-title span{
+      color:var(--rojo);
+    }
+
+    .section-text{
+      color:#666;
+      line-height:1.9;
+      font-size:1.05rem;
+    }
+
+    .service-card{
+      background:white;
+      border-radius:28px;
+      padding:40px 35px;
+      height:100%;
+      transition:0.4s ease;
+      border:1px solid #ececec;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .service-card::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:5px;
+      background:var(--rojo);
+    }
+
+    .service-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 25px 50px rgba(0,0,0,0.1);
+    }
+
+    .service-icon{
+      width:70px;
+      height:70px;
+      background:rgba(177,18,38,0.1);
+      border-radius:20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:25px;
+      font-size:2rem;
+      color:var(--rojo);
+    }
+
+    .service-card h4{
+      font-weight:700;
+      margin-bottom:15px;
+      color:var(--negro);
+    }
+
+    .stats{
+      background:var(--negro);
+      color:white;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .stats::before{
+      content:'';
+      position:absolute;
+      right:-100px;
+      top:-100px;
+      width:400px;
+      height:400px;
+      background:rgba(177,18,38,0.15);
+      border-radius:50%;
+    }
+
+    .stat-box{
+      text-align:center;
+      position:relative;
+      z-index:2;
+    }
+
+    .stat-box h2{
+      font-size:4rem;
+      font-weight:800;
+      color:var(--rojo);
+    }
+
+    .stat-box p{
+      color:#ddd;
+      letter-spacing:1px;
+    }
+
+    .why-moai{
+      background:var(--gris-light);
+    }
+
+    .feature-box{
+      padding:30px;
+      border-left:5px solid var(--rojo);
+      background:white;
+      margin-bottom:25px;
+      border-radius:0 20px 20px 0;
+    }
+
+    .feature-box h5{
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .cta{
+      background:
+      linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+      url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      color:white;
+      text-align:center;
+    }
+
+    .cta h2{
+      font-size:3.5rem;
+      font-weight:800;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      max-width:800px;
+      margin:auto;
+      color:#dcdcdc;
+      line-height:1.8;
+      margin-bottom:40px;
+    }
+
+    footer{
+      background:#0b0b0b;
+      color:#9d9d9d;
+      padding:50px 0;
+      text-align:center;
+    }
+
+    .okinawa-line{
+      width:120px;
+      height:4px;
+      background:linear-gradient(to right,var(--rojo),transparent);
+      margin:25px 0;
+      border-radius:50px;
+    }
+
+    @media(max-width:992px){
+
+      .hero h1{
+        font-size:3rem;
+      }
+
+      .section-title{
+        font-size:2.3rem;
+      }
+
+      .cta h2{
+        font-size:2.5rem;
+      }
+
+      .offer-box{
+        text-align:center;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">MOAI <span>INMOBILIARIA</span></a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-subtitle">
+        Premium Real Estate Medellín
+      </div>
+
+      <h1>
+        Más que propiedades,<br>
+        construimos <span>patrimonio</span>
+      </h1>
+
+      <p>
+        MOAI Inmobiliaria transforma la experiencia inmobiliaria en Medellín mediante un enfoque premium, estratégico y moderno. Inspirados en la solidez y tranquilidad de Okinawa, ayudamos a propietarios e inversionistas a proteger, rentabilizar y valorizar sus inmuebles.
+      </p>
+
+      <div class="mt-5 d-flex flex-wrap gap-3">
+
+        <a href="https://wa.me/573113642529" class="btn-moai">
+          Solicitar asesoría
+        </a>
+
+        <a href="#servicios" class="btn btn-outline-light rounded-pill px-4 py-3 fw-bold">
+          Ver servicios
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <div class="offer-box">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-3 text-center">
+        <div class="offer-number">10</div>
+      </div>
+
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">
+          Oferta Exclusiva de Lanzamiento
+        </h2>
+
+        <p class="mb-0 fs-5">
+          Los primeros 10 propietarios o inversionistas que nos escriban por WhatsApp recibirán un descuento especial en nuestros servicios inmobiliarios premium.
+        </p>
+      </div>
+
+      <div class="col-lg-3 text-center mt-4 mt-lg-0">
+        <a href="https://wa.me/573113642529" class="btn btn-light rounded-pill px-4 py-3 fw-bold text-dark">
+          Reclamar descuento
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+
+        <h2 class="section-title">
+          Inspirados en la <span>confianza</span>
+        </h2>
+
+        <div class="okinawa-line"></div>
+
+        <p class="section-text">
+          MOAI Inmobiliaria nace para modernizar el sector inmobiliario en Medellín. Combinamos atención personalizada, marketing digital, tecnología y conocimiento estratégico del mercado para brindar experiencias premium enfocadas en resultados reales.
+        </p>
+
+        <p class="section-text">
+          Nuestro objetivo no es únicamente vender o arrendar propiedades, sino convertirnos en aliados estratégicos para la valorización y protección del patrimonio de nuestros clientes.
+        </p>
+
+      </div>
+
+      <div class="col-lg-6">
+        <img
+          src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1974&auto=format&fit=crop"
+          class="img-fluid rounded-5 shadow-lg"
+          alt="MOAI inmobiliaria"
+        >
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section why-moai" id="servicios">
+
+  <div class="container">
+
+    <div class="text-center mb-5">
+
+      <h2 class="section-title">
+        Nuestros <span>Servicios</span>
+      </h2>
+
+      <p class="section-text mx-auto" style="max-width:800px;">
+        Soluciones inmobiliarias modernas diseñadas para propietarios, inversionistas y empresas que buscan eficiencia, rentabilidad y tranquilidad.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h4>Compra y Venta</h4>
+          <p>
+            Comercialización estratégica de propiedades residenciales y comerciales con acompañamiento integral.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">📈</div>
+          <h4>Inversión Inmobiliaria</h4>
+          <p>
+            Asesoría especializada para inversionistas que buscan valorización y rentabilidad en Medellín.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">🔐</div>
+          <h4>Administración Premium</h4>
+          <p>
+            Gestión integral de inmuebles con procesos transparentes, seguros y eficientes.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">📷</div>
+          <h4>Marketing Inmobiliario</h4>
+          <p>
+            Fotografía profesional, publicidad digital y estrategias de posicionamiento premium.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">📍</div>
+          <h4>Avalúos y Estudios</h4>
+          <p>
+            Análisis estratégicos del mercado para determinar el mejor valor comercial.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="service-card">
+          <div class="service-icon">🤝</div>
+          <h4>Acompañamiento Legal</h4>
+          <p>
+            Procesos claros y soporte documental durante todas las etapas del negocio inmobiliario.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section stats">
+
+  <div class="container">
+
+    <div class="row g-5">
+
+      <div class="col-lg-4">
+        <div class="stat-box">
+          <h2>100%</h2>
+          <p>Atención personalizada</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="stat-box">
+          <h2>24/7</h2>
+          <p>Comunicación y seguimiento</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="stat-box">
+          <h2>Premium</h2>
+          <p>Experiencia inmobiliaria moderna</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+
+        <img
+          src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2070&auto=format&fit=crop"
+          class="img-fluid rounded-5 shadow-lg"
+          alt="Inversión inmobiliaria"
+        >
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <h2 class="section-title">
+          ¿Por qué elegir <span>MOAI</span>?
+        </h2>
+
+        <div class="feature-box">
+          <h5>Enfoque Premium</h5>
+          <p>
+            Atención enfocada en clientes que valoran profesionalismo, eficiencia y tranquilidad.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <h5>Innovación Digital</h5>
+          <p>
+            Tecnología y marketing moderno para maximizar resultados inmobiliarios.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <h5>Especialización Local</h5>
+          <p>
+            Conocimiento profundo del mercado inmobiliario de Medellín y su valorización.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <h5>Relaciones de Largo Plazo</h5>
+          <p>
+            Construimos confianza y acompañamiento estratégico para proteger patrimonio.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section cta">
+
+  <div class="container">
+
+    <h2>
+      Tu patrimonio merece una inmobiliaria moderna
+    </h2>
+
+    <p>
+      Si deseas vender, arrendar, invertir o administrar un inmueble en Medellín con una experiencia premium, estratégica y transparente, MOAI Inmobiliaria es tu mejor aliado.
+    </p>
+
+    <a href="https://wa.me/573113642529" class="btn-moai">
+      Hablar por WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="container">
+
+    <h4 class="fw-bold text-white mb-3">
+      MOAI INMOBILIARIA
+    </h4>
+
+    <p>
+      Medellín • Colombia
+    </p>
+
+    <p>
+      Premium Real Estate Experience
+    </p>
+
+    <p class="mt-4 mb-0">
+      © 2026 MOAI Inmobiliaria. Todos los derechos reservados.
+    </p>
+
+  </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
