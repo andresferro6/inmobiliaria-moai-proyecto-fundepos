@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOAI | Equipo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0f0f0f; color: #fff; font-family: Inter, Arial, sans-serif; }
+        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .nav { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; padding: 20px 30px; background: rgba(0,0,0,.8); position: sticky; top: 0; z-index: 10; }
+        .nav a { color: #fff; margin: 6px 12px; text-decoration: none; font-weight: 600; }
+        .nav a.logo { color: #ff2b2b; font-size: 1.35rem; }
+        .hero { padding: 72px 30px 20px; text-align: center; background: linear-gradient(135deg, #111111 0%, #C1121F 100%); }
+        .hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 16px; }
+        .hero p { opacity: .9; max-width: 720px; margin: 0 auto; line-height: 1.7; }
+        .team { display: grid; gap: 24px; max-width: 1100px; margin: 32px auto; padding: 0 30px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+        .member { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 24px; padding: 26px; display: flex; flex-direction: column; gap: 14px; }
+        .member span { color: #ff2b2b; font-weight: 700; font-size: .95rem; }
+        .member h2 { font-size: 1.45rem; }
+        .member p { line-height: 1.7; opacity: .9; }
+        .cta { text-align: center; padding: 40px 20px; }
+        .cta a { display: inline-block; background: #ff2b2b; color: white; padding: 16px 34px; border-radius: 999px; text-decoration: none; font-weight: 700; }
+        .footer { margin-top: auto; padding: 30px 20px; background: #060606; text-align: center; color: rgba(255,255,255,.7); font-size: .95rem; }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="nav">
+        <a class="logo" href="index.html">MOAI</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="propiedades.html">Propiedades</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="descuento.html">Promoción</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Un equipo experto en cerrar tratos y mejorar tu marca</h1>
+        <p>MOAI combina experiencia inmobiliaria con tecnología para acelerar operaciones, posicionar inmuebles y brindar atención premium a cada cliente.</p>
+    </section>
+    <section class="team">
+        <article class="member">
+            <span>Consultoría Digital</span>
+            <h2>Tokio: tu asistente de ventas</h2>
+            <p>Atiende prospectos en tiempo real, califica leads y dirige solicitudes al mejor asesor disponible para cerrar más rápido.</p>
+        </article>
+        <article class="member">
+            <span>Gestión Comercial</span>
+            <h2>Coordinadores de tráfico</h2>
+            <p>Un equipo que mantiene tu inventario vivo con publicaciones segmentadas y comunicaciones rápidas con compradores potenciales.</p>
+        </article>
+        <article class="member">
+            <span>Producción visual</span>
+            <h2>Fotografía y video profesional</h2>
+            <p>Imágenes premium y contenido visual atractivo que genera mayor confianza y acelera las decisiones de compra.</p>
+        </article>
+        <article class="member">
+            <span>Servicio al cliente</span>
+            <h2>Atención humana 24/7</h2>
+            <p>Prospectos reciben seguimiento constante, respuestas confiables y acceso inmediato a información clave del inmueble.</p>
+        </article>
+    </section>
+    <div class="cta">
+        <a href="chatbot.html">Conecta con Tokio</a>
+    </div>
+    <footer class="footer">
+        <p>Un equipo ágil, digital y orientado a resultados para ayudarte a vender mejor cada propiedad.</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -4,79 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOAI Inmobiliaria</title>
-
     <style>
-
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        body{
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background:linear-gradient(
-                135deg,
-                #111111 0%,
-                #C1121F 100%
-            );
-            font-family:Inter,Arial,sans-serif;
-            color:white;
-            text-align:center;
-        }
-
-        .container{
-            max-width:700px;
-            padding:40px;
-        }
-
-        h1{
-            font-size:56px;
-            margin-bottom:20px;
-        }
-
-        p{
-            font-size:20px;
-            opacity:.9;
-            margin-bottom:40px;
-        }
-
-        .btn{
-            display:inline-block;
-            padding:18px 40px;
-            background:white;
-            color:#C1121F;
-            text-decoration:none;
-            font-weight:bold;
-            border-radius:12px;
-            transition:.3s;
-        }
-
-        .btn:hover{
-            transform:translateY(-3px);
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #070707; color: #fff; font-family: Inter, Arial, sans-serif; }
+        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .hero { display: grid; place-items: center; text-align: center; min-height: 100vh; padding: 40px 20px; background: linear-gradient(135deg, #111111 0%, #C1121F 100%); }
+        .hero h1 { font-size: clamp(3rem, 6vw, 5rem); line-height: 1; margin-bottom: 16px; }
+        .hero p { max-width: 720px; margin: 0 auto 28px; font-size: 1.1rem; opacity: .93; line-height: 1.8; }
+        .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+        .buttons a { display: inline-flex; align-items: center; justify-content: center; padding: 16px 28px; border-radius: 999px; background: #fff; color: #C1121F; font-weight: 700; text-decoration: none; transition: transform .2s, background .2s; }
+        .buttons a.secondary { background: rgba(255,255,255,.12); color: #fff; }
+        .buttons a:hover { transform: translateY(-3px); }
+        .section { max-width: 1120px; margin: 0 auto; padding: 48px 24px; }
+        .cards { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+        .card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 24px; padding: 28px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; }
+        .card h2 { font-size: 1.5rem; margin-bottom: 14px; }
+        .card p { line-height: 1.8; opacity: .93; }
+        .cards .highlight { border-color: #ff2b2b; background: rgba(255,43,43,.08); }
+        .nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; padding: 20px 24px; background: rgba(0,0,0,.65); position: sticky; top: 0; z-index: 10; }
+        .nav a { color: #fff; text-decoration: none; font-weight: 600; padding: 10px 14px; border-radius: 999px; transition: background .2s; }
+        .nav a:hover { background: rgba(255,255,255,.08); }
     </style>
 </head>
 <body>
-
-<div class="container">
-
-    <h1>🏠 MOAI</h1>
-
-    <p>
-        Administración inmobiliaria moderna,
-        rápida y completamente digital.
-    </p>
-
-    <a class="btn" href="chatbot.html">
-        Hablar con Tokio
-    </a>
-
+<div class="page">
+    <nav class="nav">
+        <a href="servicios.html">Servicios</a>
+        <a href="propiedades.html">Propiedades</a>
+        <a href="equipo.html">Equipo</a>
+        <a href="testimonios.html">Testimonios</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="descuento.html">Promoción</a>
+    </nav>
+    <section class="hero">
+        <h1>MOAI Inmobiliaria</h1>
+        <p>Impulsa tu marca con servicios digitales, atención inmediata y estrategias de venta inmobiliaria que convierten más rápido.</p>
+        <div class="buttons">
+            <a href="servicios.html">Conoce nuestros servicios</a>
+            <a class="secondary" href="chatbot.html">Hablar con Tokio</a>
+        </div>
+    </section>
+    <section class="section">
+        <div class="cards">
+            <article class="card highlight">
+                <h2>Vende más rápido</h2>
+                <p>Actualiza tu propuesta con marketing digital, gestión de leads y un proceso de ventas ágil que acelera cada cierre.</p>
+            </article>
+            <article class="card">
+                <h2>Marca profesional</h2>
+                <p>Destaca frente a la competencia con imágenes, contenidos y mensajes alineados a una experiencia inmobiliaria premium.</p>
+            </article>
+            <article class="card">
+                <h2>Atención inmediata</h2>
+                <p>Tokio responde al instante, filtra prospectos y te conecta con clientes interesados desde el primer contacto.</p>
+            </article>
+            <article class="card">
+                <h2>Presencia digital</h2>
+                <p>Tu inventario en línea se muestra de forma clara, confiable y enfocada en quienes están listos para negociar.</p>
+            </article>
+        </div>
+    </section>
 </div>
-
 </body>
 </html>

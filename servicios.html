@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOAI | Servicios</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Inter, Arial, sans-serif; background: #0f0f0f; color: #fff; }
+        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .nav { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 20px 32px; background: rgba(0,0,0,.75); position: sticky; top: 0; z-index: 10; }
+        .nav a { color: #fff; text-decoration: none; margin: 6px 12px; font-weight: 600; }
+        .nav a.logo { font-size: 1.3rem; color: #ff2b2b; }
+        .hero { padding: 80px 32px 40px; text-align: center; background: linear-gradient(135deg, #111111 0%, #C1121F 100%); }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 16px; }
+        .hero p { font-size: 1.1rem; max-width: 760px; margin: 0 auto 24px; opacity: .92; }
+        .hero .btn { display: inline-block; margin-top: 14px; padding: 16px 32px; background: #fff; color: #C1121F; font-weight: 700; border-radius: 999px; transition: transform .2s; }
+        .hero .btn:hover { transform: translateY(-2px); }
+        .grid { display: grid; gap: 24px; max-width: 1120px; margin: 0 auto; padding: 32px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+        .card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 24px; padding: 28px; min-height: 260px; display: flex; flex-direction: column; justify-content: space-between; }
+        .card h2 { font-size: 1.5rem; margin-bottom: 14px; color: #fff; }
+        .card p { line-height: 1.7; opacity: .85; }
+        .banner { background: #111111; color: #fff; text-align: center; padding: 32px 20px; margin: 20px 0 0; }
+        .banner strong { color: #ff2b2b; }
+        .footer { margin-top: auto; padding: 32px 20px; background: #060606; text-align: center; color: rgba(255,255,255,.7); font-size: .95rem; }
+        .footer a { color: #ff2b2b; text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="nav">
+        <a class="logo" href="index.html">MOAI</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="propiedades.html">Propiedades</a>
+            <a href="equipo.html">Equipo</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="descuento.html">Promoción</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Servicios inmobiliarios diseñados para vender más rápido</h1>
+        <p>En MOAI conectamos a tu marca con prospectos calificados, administramos cada etapa con tecnología y cerramos operaciones sin demoras.</p>
+        <a class="btn" href="chatbot.html">Habla con Tokio ahora</a>
+    </section>
+    <section class="grid">
+        <article class="card">
+            <div>
+                <h2>Marketing digital inmobiliario</h2>
+                <p>Posicionamos tus propiedades con contenido profesional, campañas de alto impacto y anuncios optimizados para clientes reales.</p>
+            </div>
+        </article>
+        <article class="card">
+            <div>
+                <h2>Gestión 100% digital</h2>
+                <p>Automatizamos visitas, contratos y seguimientos para que vendas rápido sin perder control de cada operación.</p>
+            </div>
+        </article>
+        <article class="card">
+            <div>
+                <h2>Asesoría personalizada</h2>
+                <p>Te apoyamos con valoraciones, estrategia de renta o venta y recomendaciones que aumentan la conversión.</p>
+            </div>
+        </article>
+        <article class="card">
+            <div>
+                <h2>Portafolio a tu medida</h2>
+                <p>Construimos visitas y ofertas selectivas para tu proyecto: viviendas, oficinas, locales comerciales y desarrollos premium.</p>
+            </div>
+        </article>
+        <article class="card">
+            <div>
+                <h2>Atención 24/7</h2>
+                <p>Tokio está lista para responder prospectos, resolver dudas y conectar a compradores con tu equipo de ventas.</p>
+            </div>
+        </article>
+        <article class="card">
+            <div>
+                <h2>Resultados medibles</h2>
+                <p>Recibe reportes claros, leads calificados y una estrategia continua para vender mejor en cada campaña.</p>
+            </div>
+        </article>
+    </section>
+    <div class="banner">
+        <strong>Beneficio inmediato:</strong> reduce tiempos de cierre y mejora la presencia de tu marca en el mercado inmobiliario con MOAI.
+    </div>
+    <footer class="footer">
+        <p>¿Listo para impulsar tu cartera? <a href="contacto.html">Contáctanos</a> y recibe una propuesta comercial en minutos.</p>
+    </footer>
+</div>
+</body>
+</html>

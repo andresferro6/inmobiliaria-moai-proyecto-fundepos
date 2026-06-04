@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOAI | Testimonios</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #090909; color: #fff; font-family: Inter, Arial, sans-serif; }
+        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .nav { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; padding: 20px 30px; background: rgba(0,0,0,.78); position: sticky; top: 0; z-index: 10; }
+        .nav a { color: #fff; margin: 6px 12px; text-decoration: none; font-weight: 600; }
+        .nav a.logo { color: #ff2b2b; font-size: 1.35rem; }
+        .hero { padding: 72px 30px 24px; text-align: center; background: linear-gradient(135deg, #111111 0%, #C1121F 100%); }
+        .hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 16px; }
+        .hero p { opacity: .88; max-width: 760px; margin: 0 auto; line-height: 1.7; }
+        .testimonials { display: grid; gap: 24px; max-width: 1080px; margin: 32px auto; padding: 0 30px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .quote { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 24px; padding: 26px; display: flex; flex-direction: column; gap: 18px; }
+        .quote p { line-height: 1.8; opacity: .92; }
+        .author { display: flex; flex-direction: column; gap: 6px; }
+        .author span { color: #ff2b2b; font-weight: 700; }
+        .author small { color: rgba(255,255,255,.7); }
+        .cta { text-align: center; padding: 36px 20px; }
+        .cta a { display: inline-block; background: #ff2b2b; color: white; padding: 16px 32px; border-radius: 999px; text-decoration: none; font-weight: 700; }
+        .footer { margin-top: auto; padding: 30px 20px; background: #030303; text-align: center; color: rgba(255,255,255,.7); font-size: .95rem; }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="nav">
+        <a class="logo" href="index.html">MOAI</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="propiedades.html">Propiedades</a>
+            <a href="equipo.html">Equipo</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="descuento.html">Promoción</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Clientes que ya venden mejor con MOAI</h1>
+        <p>Historias reales de crecimiento, arrendamientos rápidos y cierres efectivos gracias a un servicio inmobiliario ágil y digital.</p>
+    </section>
+    <section class="testimonials">
+        <article class="quote">
+            <p>"Gracias a MOAI cerramos la venta del apartamento en menos de una semana. La estrategia digital realmente marcó la diferencia."</p>
+            <div class="author">
+                <span>Laura Gómez</span>
+                <small>Vendedora de vivienda en Medellín</small>
+            </div>
+        </article>
+        <article class="quote">
+            <p>"Tokio respondió en segundos y los leads fueron de alta calidad. El proceso fue rápido, transparente y con excelente comunicación."</p>
+            <div class="author">
+                <span>Diego Sánchez</span>
+                <small>Propietario de locales comerciales</small>
+            </div>
+        </article>
+        <article class="quote">
+            <p>"El equipo de MOAI nos ayudó a relanzar nuestro portafolio con imágenes profesionales y visitas programadas. Vimos interés real desde el primer día."</p>
+            <div class="author">
+                <span>Carolina Pinto</span>
+                <small>Asesora inmobiliaria</small>
+            </div>
+        </article>
+    </section>
+    <div class="cta">
+        <a href="contacto.html">Únete a los casos de éxito</a>
+    </div>
+    <footer class="footer">
+        <p>Más testimonios de clientes satisfechos disponibles cuando quieras demostrar la efectividad de tu marca.</p>
+    </footer>
+</div>
+</body>
+</html>

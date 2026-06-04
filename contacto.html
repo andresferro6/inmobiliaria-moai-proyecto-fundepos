@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOAI | Contacto</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0d0d0d; color: #fff; font-family: Inter, Arial, sans-serif; }
+        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .nav { display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; padding: 20px 30px; background: rgba(0,0,0,.78); position: sticky; top: 0; z-index: 10; }
+        .nav a { color: #fff; margin: 6px 12px; text-decoration: none; font-weight: 600; }
+        .nav a.logo { color: #ff2b2b; font-size: 1.35rem; }
+        .hero { padding: 72px 30px 24px; text-align: center; background: linear-gradient(135deg, #111111 0%, #C1121F 100%); }
+        .hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 16px; }
+        .hero p { opacity: .88; max-width: 720px; margin: 0 auto; line-height: 1.7; }
+        .contact-grid { display: grid; gap: 24px; max-width: 1000px; margin: 32px auto; padding: 0 30px; grid-template-columns: 1.2fr .8fr; }
+        .panel { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 24px; padding: 28px; }
+        .panel h2 { font-size: 1.65rem; margin-bottom: 16px; }
+        .panel p { line-height: 1.8; opacity: .9; margin-bottom: 24px; }
+        .details { display: grid; gap: 14px; }
+        .details span { display: block; font-weight: 700; color: #ff2b2b; }
+        .details a { color: #fff; text-decoration: none; opacity: .95; }
+        .button-group { display: grid; gap: 14px; margin-top: 24px; }
+        .button-group a { display: inline-block; background: #ff2b2b; color: white; padding: 16px 24px; border-radius: 999px; text-decoration: none; font-weight: 700; text-align: center; }
+        .info { background: rgba(255,255,255,.04); padding: 26px; border-radius: 24px; }
+        .info h3 { margin-bottom: 14px; }
+        .info p { line-height: 1.7; opacity: .9; }
+        .footer { margin-top: auto; padding: 30px 20px; background: #060606; text-align: center; color: rgba(255,255,255,.7); font-size: .95rem; }
+        @media(max-width: 840px) { .contact-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="nav">
+        <a class="logo" href="index.html">MOAI</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="propiedades.html">Propiedades</a>
+            <a href="equipo.html">Equipo</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="descuento.html">Promoción</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Conecta con MOAI y acelera tus ventas</h1>
+        <p>Estamos listos para llevar tu cartera al siguiente nivel con atención inmediata, estrategia clara y respuesta directa por WhatsApp.</p>
+    </section>
+    <section class="contact-grid">
+        <div class="panel">
+            <h2>Vamos directo al contacto</h2>
+            <p>Para vender mejor necesitas respuestas rápidas. Escríbenos y te damos una propuesta de valor para tu inmueble o proyecto.</p>
+            <div class="details">
+                <div>
+                    <span>WhatsApp</span>
+                    <a href="https://wa.me/573113642529" target="_blank">+57 311 364 2529</a>
+                </div>
+                <div>
+                    <span>Correo</span>
+                    <a href="mailto:contacto@moaiinmobiliaria.com">contacto@moaiinmobiliaria.com</a>
+                </div>
+                <div>
+                    <span>Asesoría</span>
+                    <p>Tokio te acompaña en vivo y te conecta con el mejor asesor disponible.</p>
+                </div>
+            </div>
+            <div class="button-group">
+                <a href="chatbot.html">Chat con Tokio</a>
+                <a href="https://wa.me/573113642529" target="_blank">Enviar WhatsApp</a>
+            </div>
+        </div>
+        <aside class="info">
+            <h3>¿Por qué contactarnos?</h3>
+            <p>MOAI te ayuda a acelerar tu proceso de venta o arriendo con:</p>
+            <ul style="margin-top:16px; line-height:1.8; opacity:.9;">
+                <li>Seguimiento rápido de leads.</li>
+                <li>Presentaciones atractivas de tu inmueble.</li>
+                <li>Recomendaciones de precio y estrategia.</li>
+                <li>Atención profesional para tus clientes.</li>
+            </ul>
+        </aside>
+    </section>
+    <footer class="footer">
+        <p>Contacto diseñado para que tu marca sea visible, confiable y cierre operaciones sin fricción.</p>
+    </footer>
+</div>
+</body>
+</html>
