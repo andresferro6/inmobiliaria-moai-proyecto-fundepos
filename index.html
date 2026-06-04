@@ -1,139 +1,82 @@
-<flowise-fullchatbot></flowise-fullchatbot>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOAI Inmobiliaria</title>
 
-<script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    <style>
 
-    Chatbot.initFull({
-        chatflowid: "29c03fe8-841a-422c-9baf-6fdbff2f6b48",
-        apiHost: "https://cloud.flowiseai.com",
-        chatflowConfig: {},
-        observersConfig: {},
-        theme: {
-            button: {
-                backgroundColor: '#C1121F',
-                right: 20,
-                bottom: 20,
-                size: 52,
-                dragAndDrop: true,
-                iconColor: 'white',
-                customIconSrc: 'https://cdn-icons-png.flaticon.com/512/4712/4712027.png',
-                autoWindowOpen: {
-                    autoOpen: true,
-                    openDelay: 2,
-                    autoOpenOnMobile: false
-                }
-            },
-            tooltip: {
-                showTooltip: true,
-                tooltipMessage: '🏠 ¿Necesitas ayuda con tu inmueble?',
-                tooltipBackgroundColor: '#111111',
-                tooltipTextColor: '#FFFFFF',
-                tooltipFontSize: 15
-            },
-            disclaimer: {
-                title: 'Bienvenido a MOAI',
-                message: 'Al usar este asistente aceptas compartir la información necesaria para ayudarte con tu solicitud inmobiliaria.',
-                textColor: '#111111',
-                buttonColor: '#C1121F',
-                buttonText: 'Iniciar conversación',
-                buttonTextColor: '#FFFFFF',
-                blurredBackgroundColor: 'rgba(0, 0, 0, 0.45)',
-                backgroundColor: '#FFFFFF'
-            },
-            customCSS: `
-                .flowise-chatbot {
-                    font-family: Inter, Arial, sans-serif !important;
-                }
-
-                .chatbot-container {
-                    border-radius: 22px !important;
-                    overflow: hidden !important;
-                    box-shadow: 0 20px 60px rgba(0,0,0,0.18) !important;
-                    border: 1px solid #EEEEEE !important;
-                }
-
-                .chatbot-header {
-                    background: linear-gradient(135deg, #111111 0%, #C1121F 100%) !important;
-                    color: #FFFFFF !important;
-                }
-
-                .chatbot-footer {
-                    border-top: 1px solid #EEEEEE !important;
-                }
-
-                .chatbot-starter-prompt {
-                    border: 1px solid #C1121F !important;
-                    color: #C1121F !important;
-                    border-radius: 14px !important;
-                    font-weight: 500 !important;
-                }
-
-                .chatbot-starter-prompt:hover {
-                    background: #C1121F !important;
-                    color: #FFFFFF !important;
-                }
-            `,
-            chatWindow: {
-                showTitle: true,
-                showAgentMessages: true,
-                title: 'Tokio · Asistente MOAI',
-                titleAvatarSrc: 'https://cdn-icons-png.flaticon.com/512/4712/4712027.png',
-                welcomeMessage: 'Hola 👋 Soy Tokio, el asistente virtual de MOAI Inmobiliaria. Puedo ayudarte con arriendos, propietarios, entregas, reparaciones, pagos, contratos y solicitudes administrativas.',
-                errorMessage: 'Lo sentimos, ocurrió un error. Por favor intenta de nuevo o comunícate con nuestro equipo por WhatsApp.',
-                backgroundColor: '#FAFAFA',
-                backgroundImage: '',
-                height: '100%',
-                width: '100%',
-                fontSize: 16,
-                starterPrompts: [
-                    'Quiero arrendar mi inmueble',
-                    'Estoy buscando una propiedad',
-                    'Necesito reportar una reparación',
-                    'Tengo dudas sobre mi contrato'
-                ],
-                starterPromptFontSize: 14,
-                clearChatOnReload: false,
-                sourceDocsTitle: 'Fuentes:',
-                renderHTML: true,
-                botMessage: {
-                    backgroundColor: '#FFFFFF',
-                    textColor: '#111111',
-                    showAvatar: true,
-                    avatarSrc: 'https://cdn-icons-png.flaticon.com/512/4712/4712027.png'
-                },
-                userMessage: {
-                    backgroundColor: '#C1121F',
-                    textColor: '#FFFFFF',
-                    showAvatar: true,
-                    avatarSrc: 'https://cdn-icons-png.flaticon.com/512/149/149071.png'
-                },
-                textInput: {
-                    placeholder: '¿Cómo podemos ayudarte hoy?',
-                    backgroundColor: '#FFFFFF',
-                    textColor: '#111111',
-                    sendButtonColor: '#C1121F',
-                    maxChars: 300,
-                    maxCharsWarningMessage: 'Superaste el límite de caracteres. Por favor escribe un mensaje más corto.',
-                    autoFocus: true,
-                    sendMessageSound: true,
-                    sendSoundLocation: 'send_message.mp3',
-                    receiveMessageSound: true,
-                    receiveSoundLocation: 'receive_message.mp3'
-                },
-                feedback: {
-                    color: '#111111'
-                },
-                dateTimeToggle: {
-                    date: true,
-                    time: true
-                },
-                footer: {
-                    textColor: '#666666',
-                    text: 'Atendido por',
-                    company: 'MOAI',
-                    companyLink: 'https://escalainmobiliaria.com.co'
-                }
-            }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
-    })
-</script>
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(
+                135deg,
+                #111111 0%,
+                #C1121F 100%
+            );
+            font-family:Inter,Arial,sans-serif;
+            color:white;
+            text-align:center;
+        }
+
+        .container{
+            max-width:700px;
+            padding:40px;
+        }
+
+        h1{
+            font-size:56px;
+            margin-bottom:20px;
+        }
+
+        p{
+            font-size:20px;
+            opacity:.9;
+            margin-bottom:40px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:18px 40px;
+            background:white;
+            color:#C1121F;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius:12px;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            transform:translateY(-3px);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏠 MOAI</h1>
+
+    <p>
+        Administración inmobiliaria moderna,
+        rápida y completamente digital.
+    </p>
+
+    <a class="btn" href="chatbot.html">
+        Hablar con Tokio
+    </a>
+
+</div>
+
+</body>
+</html>
