@@ -6,24 +6,24 @@
     <title>MOAI Inmobiliaria</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #070707; color: #fff; font-family: Inter, Arial, sans-serif; }
+        body { background: #f9f8f6; color: #111; font-family: Inter, Arial, sans-serif; }
         .page { min-height: 100vh; display: flex; flex-direction: column; }
-        .hero { display: grid; place-items: center; text-align: center; min-height: 100vh; padding: 40px 20px; background: linear-gradient(135deg, #111111 0%, #C1121F 100%); }
-        .hero h1 { font-size: clamp(3rem, 6vw, 5rem); line-height: 1; margin-bottom: 16px; }
-        .hero p { max-width: 720px; margin: 0 auto 28px; font-size: 1.1rem; opacity: .93; line-height: 1.8; }
+        .hero { display: grid; place-items: center; text-align: center; min-height: 100vh; padding: 40px 20px; background: #fff; }
+        .hero h1 { font-size: clamp(3rem, 6vw, 5rem); line-height: 1; margin-bottom: 16px; color: #111; }
+        .hero p { max-width: 720px; margin: 0 auto 28px; font-size: 1.1rem; opacity: .85; line-height: 1.8; color: #333; }
         .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
-        .buttons a { display: inline-flex; align-items: center; justify-content: center; padding: 16px 28px; border-radius: 999px; background: #fff; color: #C1121F; font-weight: 700; text-decoration: none; transition: transform .2s, background .2s; }
-        .buttons a.secondary { background: rgba(255,255,255,.12); color: #fff; }
+        .buttons a { display: inline-flex; align-items: center; justify-content: center; padding: 16px 28px; border-radius: 999px; background: #ff2b2b; color: #fff; font-weight: 700; text-decoration: none; transition: transform .2s, background .2s; }
+        .buttons a.secondary { background: #111; }
         .buttons a:hover { transform: translateY(-3px); }
         .section { max-width: 1120px; margin: 0 auto; padding: 48px 24px; }
         .cards { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-        .card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: 24px; padding: 28px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; }
-        .card h2 { font-size: 1.5rem; margin-bottom: 14px; }
-        .card p { line-height: 1.8; opacity: .93; }
-        .cards .highlight { border-color: #ff2b2b; background: rgba(255,43,43,.08); }
-        .nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; padding: 20px 24px; background: rgba(0,0,0,.65); position: sticky; top: 0; z-index: 10; }
-        .nav a { color: #fff; text-decoration: none; font-weight: 600; padding: 10px 14px; border-radius: 999px; transition: background .2s; }
-        .nav a:hover { background: rgba(255,255,255,.08); }
+        .card { background: #fff; border: 1px solid #e6e3df; border-radius: 24px; padding: 28px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 18px 40px rgba(0,0,0,.06); }
+        .card h2 { font-size: 1.5rem; margin-bottom: 14px; color: #111; }
+        .card p { line-height: 1.8; opacity: .85; color: #444; }
+        .cards .highlight { border-color: #ffb3b3; background: #fff4f4; }
+        .nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; padding: 20px 24px; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 10; }
+        .nav a { color: #111; text-decoration: none; font-weight: 600; padding: 10px 14px; border-radius: 999px; transition: background .2s; }
+        .nav a:hover { background: #f2f0ee; }
     </style>
 </head>
 <body>

@@ -11,21 +11,30 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #111;
-      color: white;
+      background: #f8f7f5;
+      color: #111;
       overflow-x: hidden;
     }
 
     .navbar {
-      background: rgba(0,0,0,.95);
+      background: #fff;
+      border-bottom: 1px solid #e7e5e2;
+    }
+
+    .navbar-brand {
+      color: #d71f27 !important;
+    }
+
+    .nav-link {
+      color: #333 !important;
     }
 
     .mega-banner {
-      background: #ff0000;
+      background: #d71f27;
       color: white;
       padding: 18px;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 900;
       letter-spacing: .5px;
       animation: pulse 1s infinite;
@@ -36,58 +45,114 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background:
-      linear-gradient(135deg,#111 0%,#2a0000 45%,#b00020 100%);
-      padding: 100px 0;
+      background: #ffffff;
+      padding: 80px 0;
     }
 
     .discount {
-      font-size: 8rem;
+      font-size: 7rem;
       font-weight: 1000;
       line-height: 1;
-      color: white;
-      text-shadow: 0 10px 30px rgba(0,0,0,.35);
+      color: #d71f27;
     }
 
     .timer-card {
-      background: white;
+      background: #fff;
       color: #111;
-      border-radius: 35px;
-      padding: 40px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.35);
-      border: 6px solid #ff0000;
+      border-radius: 32px;
+      padding: 36px;
+      box-shadow: 0 22px 56px rgba(0,0,0,.08);
+      border: 1px solid #f0e9e7;
     }
 
     .timer {
-      font-size: 5rem;
+      font-size: 4.5rem;
       font-weight: 1000;
-      color: #ff0000;
+      color: #d71f27;
       line-height: 1;
     }
 
     .btn-whatsapp {
-      background: #25D366;
+      background: #d71f27;
       color: white;
       border-radius: 60px;
-      padding: 20px 40px;
+      padding: 18px 38px;
       text-decoration: none;
       font-weight: 900;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       display: inline-block;
-      animation: pulse 1.2s infinite;
-      box-shadow: 0 15px 40px rgba(37,211,102,.35);
+      box-shadow: 0 15px 40px rgba(215,31,39,.2);
     }
 
     .btn-whatsapp:hover {
-      background: #1ebe5d;
+      background: #b71820;
       color: white;
     }
 
+    .promo-form {
+      background: #fff;
+      border: 1px solid #ece7e3;
+      border-radius: 32px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.05);
+      margin-top: 40px;
+    }
+
+    .promo-form h3 {
+      margin-bottom: 18px;
+      color: #111;
+    }
+
+    .promo-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #4d4b48;
+      font-weight: 600;
+    }
+
+    .promo-form input,
+    .promo-form textarea,
+    .promo-form select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid #ded7d2;
+      background: #fbfaf8;
+      margin-bottom: 18px;
+      font-size: 1rem;
+      color: #222;
+    }
+
+    .promo-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .promo-form button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 24px;
+      border-radius: 999px;
+      border: none;
+      background: #d71f27;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s, background .2s;
+    }
+
+    .promo-form button:hover {
+      transform: translateY(-2px);
+      background: #b71820;
+    }
+
     .warning-box {
-      background: rgba(255,255,255,.08);
-      border: 2px solid rgba(255,255,255,.15);
+      background: #fff;
+      border: 1px solid #ece7e3;
       border-radius: 25px;
       padding: 30px;
+      color: #333;
     }
 
     .floating-bar {
@@ -95,12 +160,12 @@
       bottom: 20px;
       left: 20px;
       right: 20px;
-      background: #ff0000;
+      background: #d71f27;
       color: white;
       border-radius: 25px;
       padding: 20px;
       z-index: 9999;
-      box-shadow: 0 15px 45px rgba(0,0,0,.4);
+      box-shadow: 0 15px 45px rgba(0,0,0,.2);
     }
 
     @keyframes pulse {
@@ -239,6 +304,37 @@
 
       </div>
 
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8">
+        <div class="promo-form">
+          <h3>Solicita tu descuento</h3>
+          <form action="mailto:contacto@moaiinmobiliaria.com" method="post" enctype="text/plain">
+            <label for="name">Nombre completo</label>
+            <input id="name" name="Nombre" type="text" placeholder="Tu nombre" required>
+
+            <label for="phone">Teléfono o WhatsApp</label>
+            <input id="phone" name="Teléfono" type="tel" placeholder="+57 311 000 0000" required>
+
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="Correo" type="email" placeholder="correo@ejemplo.com" required>
+
+            <label for="interest">Estoy interesado en</label>
+            <select id="interest" name="Interes" required>
+              <option value="">Selecciona una opción</option>
+              <option value="venta">Venta</option>
+              <option value="arriendo">Arriendo</option>
+              <option value="asesoria">Asesoría</option>
+            </select>
+
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="Mensaje" placeholder="Cuéntanos lo que necesitas" required></textarea>
+
+            <button type="submit">Enviar mi solicitud</button>
+          </form>
+        </div>
+      </div>
     </div>
 
   </div>
