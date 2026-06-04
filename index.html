@@ -1,776 +1,107 @@
-<!doctype html>
-<html lang="es">
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>MOAI Inmobiliaria</title>
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f5f5f5;
-      color: #111;
-      overflow-x: hidden;
-    }
-
-    /* NAVBAR */
-
-    .navbar {
-      background: rgba(0,0,0,.95);
-      backdrop-filter: blur(8px);
-    }
-
-    /* HERO */
-
-    .hero {
-
-      min-height: 100vh;
-
-      background:
-      linear-gradient(
-        135deg,
-        #111 0%,
-        #1c1c1c 40%,
-        #5a0000 70%,
-        #b00020 100%
-      );
-
-      color: white;
-      display: flex;
-      align-items: center;
-      position: relative;
-      padding: 140px 0 100px;
-      overflow: hidden;
-
-    }
-
-    .hero::before {
-
-      content: "";
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      background: rgba(255,255,255,.05);
-      border-radius: 50%;
-      top: -250px;
-      right: -200px;
-
-    }
-
-    /* BUTTON */
-
-    .btn-red {
-
-      background: #b00020;
-      color: white;
-      border-radius: 60px;
-      padding: 18px 36px;
-      font-weight: 800;
-      text-decoration: none;
-      display: inline-block;
-      transition: .3s;
-      box-shadow: 0 15px 40px rgba(176,0,32,.35);
-
-    }
-
-    .btn-red:hover {
-
-      background: #870018;
-      color: white;
-      transform: translateY(-3px);
-
-    }
-
-    /* GLASS CARD */
-
-    .glass-card {
-
-      background: rgba(255,255,255,.1);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 30px;
-      padding: 40px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.25);
-
-    }
-
-    /* FEATURE CARD */
-
-    .feature-card {
-
-      background: white;
-      border-radius: 28px;
-      padding: 35px;
-      box-shadow: 0 15px 40px rgba(0,0,0,.08);
-      height: 100%;
-      transition: .3s;
-      border-top: 6px solid #b00020;
-
-    }
-
-    .feature-card:hover {
-
-      transform: translateY(-10px);
-
-    }
-
-    .section-title {
-
-      color: #b00020;
-      font-weight: 900;
-
-    }
-
-    .promo-section {
-
-      background:
-      linear-gradient(
-        135deg,
-        #111 0%,
-        #2a0000 50%,
-        #b00020 100%
-      );
-
-      color: white;
-
-    }
-
-    .promo-box {
-
-      background: rgba(255,255,255,.08);
-      border-radius: 30px;
-      padding: 50px;
-      border: 1px solid rgba(255,255,255,.12);
-
-    }
-
-    .stat-number {
-
-      font-size: 3rem;
-      font-weight: 1000;
-      color: #b00020;
-
-    }
-
-    footer {
-
-      background: #111;
-      color: white;
-      padding: 45px 0;
-
-    }
-
-    @media(max-width:768px) {
-
-      .hero {
-        text-align: center;
-      }
-
-      .display-2 {
-        font-size: 2.8rem;
-      }
-
-      .glass-card {
-        margin-top: 20px;
-      }
-
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
-
-  <div class="container">
-
-    <a class="navbar-brand fw-bold text-danger" href="index.html">
-      MOAI Inmobiliaria
-    </a>
-
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarMoai">
-
-      <span class="navbar-toggler-icon"></span>
-
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMoai">
-
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">
-            Inicio
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="descuento.html">
-            Promoción
-          </a>
-        </li>
-
-        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-
-          <a
-            href="https://wa.me/573113642529"
-            target="_blank"
-            class="btn btn-danger rounded-pill px-4 fw-bold">
-
-            WhatsApp
-
-          </a>
-
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-  <div class="container position-relative">
-
-    <div class="row align-items-center g-5">
-
-      <div class="col-lg-7">
-
-        <span class="badge bg-danger px-4 py-2 rounded-pill mb-4 fs-6">
-          Inmobiliaria Premium en Medellín
-        </span>
-
-        <h1 class="display-2 fw-bold mb-4">
-
-          Más que vender propiedades,
-          construimos confianza.
-
-        </h1>
-
-        <p class="lead mb-5">
-
-          En MOAI te ayudamos a comprar,
-          vender y administrar inmuebles
-          mediante una experiencia moderna,
-          segura y enfocada en valorización patrimonial.
-
-        </p>
-
-        <div class="d-flex flex-wrap gap-3">
-
-          <a href="descuento.html" class="btn-red">
-            Ver promoción exclusiva
-          </a>
-
-          <a
-            href="https://wa.me/573113642529"
-            target="_blank"
-            class="btn btn-light rounded-pill px-4 py-3 fw-bold">
-
-            Hablar con asesor
-
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="col-lg-5">
-
-        <div class="glass-card">
-
-          <h2 class="fw-bold mb-4">
-            ¿Por qué elegir MOAI?
-          </h2>
-
-          <ul class="list-unstyled fs-5">
-
-            <li class="mb-3">✅ Atención personalizada</li>
-            <li class="mb-3">✅ Procesos transparentes</li>
-            <li class="mb-3">✅ Estrategias digitales modernas</li>
-            <li class="mb-3">✅ Acompañamiento legal y comercial</li>
-            <li class="mb-3">✅ Especialistas en Medellín</li>
-            <li class="mb-3">✅ Gestión premium para inversionistas</li>
-
-          </ul>
-
-          <a
-            href="descuento.html"
-            class="btn btn-light rounded-pill px-4 py-3 mt-3 fw-bold">
-
-            Reclamar promoción
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- SERVICES -->
-
-<section class="py-5 bg-white">
-
-  <div class="container">
-
-    <div class="text-center mb-5">
-
-      <h2 class="section-title display-5">
-        Servicios MOAI
-      </h2>
-
-      <p class="text-muted fs-5">
-        Soluciones inmobiliarias modernas y estratégicas.
-      </p>
-
-    </div>
-
-    <div class="row g-4">
-
-      <div class="col-md-4">
-
-        <div class="feature-card">
-
-          <h4 class="fw-bold mb-3">
-            Compra y venta
-          </h4>
-
-          <p>
-            Comercializamos propiedades con
-            estrategias profesionales y máxima visibilidad digital.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-4">
-
-        <div class="feature-card">
-
-          <h4 class="fw-bold mb-3">
-            Administración
-          </h4>
-
-          <p>
-            Gestión integral de inmuebles
-            enfocada en tranquilidad, seguridad y rentabilidad.
-          </p>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-4">
-
-        <div class="feature-card">
-
-          <h4 class="fw-bold mb-3">
-            Inversión inmobiliaria
-          </h4>
-
-          <p>
-            Identificamos oportunidades con alto potencial
-            de valorización y retorno patrimonial.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- STATS -->
-
-<section class="py-5">
-
-  <div class="container">
-
-    <div class="row text-center g-4">
-
-      <div class="col-md-4">
-
-        <div class="feature-card">
-
-          <div class="stat-number">
-            +100
-          </div>
-
-          <h5 class="fw-bold">
-            Clientes asesorados
-          </h5>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-4">
-
-        <div class="feature-card">
-
-          <div class="stat-number">
-            +50
-          </div>
-
-          <h5 class="fw-bold">
-            Propiedades gestionadas
-          </h5>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-4">
-
-        <div class="feature-card">
-
-          <div class="stat-number">
-            24/7
-          </div>
-
-          <h5 class="fw-bold">
-            Atención personalizada
-          </h5>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- PROMO -->
-
-<section class="promo-section py-5">
-
-  <div class="container text-center">
-
-    <div class="promo-box">
-
-      <h2 class="display-4 fw-bold mb-4">
-
-        Tenemos una promoción exclusiva activa
-
-      </h2>
-
-      <p class="lead mb-5">
-
-        Nuevos clientes pueden acceder a un
-        descuento especial sobre su primera compra.
-
-      </p>
-
-      <a href="descuento.html" class="btn btn-light text-danger rounded-pill px-5 py-3 fw-bold fs-5">
-
-        Ver descuento ahora
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="text-center">
-
-  <div class="container">
-
-    <h4 class="fw-bold mb-3">
-      MOAI Inmobiliaria
-    </h4>
-
-    <p class="mb-3">
-      Confianza • Patrimonio • Inversión
-    </p>
-
-    <a
-      href="https://wa.me/573113642529"
-      target="_blank"
-      class="btn btn-danger rounded-pill px-4 fw-bold">
-
-      Contactar asesor
-
-    </a>
-
-  </div>
-
-</footer>
-
-<!-- Bootstrap -->
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- FLOWISE MOAI STYLE -->
-
+<flowise-fullchatbot></flowise-fullchatbot>
 <script type="module">
-
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-
-    Chatbot.init({
-
-        chatflowid: "a48659cf-eccd-4508-a83b-169a01e81094",
-
+    Chatbot.initFull({
+        chatflowid: "29c03fe8-841a-422c-9baf-6fdbff2f6b48",
         apiHost: "https://cloud.flowiseai.com",
-
+        chatflowConfig: {
+            /* Chatflow Config */
+        },
+        observersConfig: {
+            /* Observers Config */
+        },
         theme: {
-
             button: {
-
-                backgroundColor: '#b00020',
-
+                backgroundColor: '#3B81F6',
                 right: 20,
-
                 bottom: 20,
-
-                size: 58,
-
+                size: 48,
                 dragAndDrop: true,
-
                 iconColor: 'white',
-
-                customIconSrc: 'https://cdn-icons-png.flaticon.com/512/4712/4712109.png',
-
+                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                 autoWindowOpen: {
-
                     autoOpen: true,
-
-                    openDelay: 3,
-
+                    openDelay: 2,
                     autoOpenOnMobile: false
-
                 }
-
             },
-
             tooltip: {
-
                 showTooltip: true,
-
-                tooltipMessage: 'Hola 👋 ¿Buscas comprar, vender o arrendar?',
-
-                tooltipBackgroundColor: '#111111',
-
-                tooltipTextColor: '#ffffff',
-
-                tooltipFontSize: 15
-
+                tooltipMessage: 'Hi There 👋!',
+                tooltipBackgroundColor: 'black',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16
             },
-
             disclaimer: {
-
-                title: 'Asistente MOAI',
-
-                message: 'Al iniciar el chat aceptas recibir orientación inmobiliaria personalizada por parte de MOAI Inmobiliaria.',
-
-                textColor: '#111111',
-
-                buttonColor: '#b00020',
-
-                buttonText: 'Iniciar conversación',
-
-                buttonTextColor: '#ffffff',
-
-                blurredBackgroundColor: 'rgba(0, 0, 0, 0.55)',
-
-                backgroundColor: '#ffffff'
-
+                title: 'Disclaimer',
+                message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
+                textColor: 'black',
+                buttonColor: '#3b82f6',
+                buttonText: 'Start Chatting',
+                buttonTextColor: 'white',
+                blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                backgroundColor: 'white'
             },
-
-            customCSS: `
-
-                .flowise-chatbot-container {
-
-                    border-radius: 24px !important;
-
-                    overflow: hidden !important;
-
-                    box-shadow: 0 25px 70px rgba(0,0,0,0.35) !important;
-
-                    border: 2px solid rgba(176,0,32,.15) !important;
-
-                    background: #f8f5f2 !important;
-
-                }
-
-                .flowise-chatbot-header {
-
-                    background: linear-gradient(135deg,#111,#b00020) !important;
-
-                }
-
-                .flowise-chatbot-button {
-
-                    background: linear-gradient(135deg,#7a0015,#b00020) !important;
-
-                    box-shadow: 0 15px 40px rgba(176,0,32,.45) !important;
-
-                    border: 2px solid rgba(255,255,255,.85) !important;
-
-                }
-
-                .flowise-chatbot-button:hover {
-
-                    transform: scale(1.08) !important;
-
-                }
-
-            `,
-
+            customCSS: ``,
             chatWindow: {
-
                 showTitle: true,
-
                 showAgentMessages: true,
-
-                title: 'Asesor Virtual MOAI',
-
-                titleAvatarSrc: 'https://cdn-icons-png.flaticon.com/512/4712/4712109.png',
-
-                welcomeMessage: 'Hola 👋 Soy el asistente virtual de MOAI Inmobiliaria. Puedo ayudarte con compra, venta, arriendos, administración de inmuebles o la promoción activa.',
-
-                errorMessage: 'No pudimos procesar tu mensaje. También puedes escribirnos por WhatsApp al +57 311 364 2529.',
-
-                backgroundColor: '#f8f5f2',
-
-                height: 680,
-
-                width: 410,
-
+                title: 'Flowise Bot',
+                titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                welcomeMessage: 'Hello! This is custom welcome message',
+                errorMessage: 'This is a custom error message',
+                backgroundColor: '#ffffff',
+                backgroundImage: 'enter image path or link',
+                height: '100%',
+                width: '100%',
                 fontSize: 16,
-
                 starterPrompts: [
-
-                    "Quiero comprar un inmueble",
-
-                    "Quiero vender mi propiedad",
-
-                    "Quiero arrendar un inmueble",
-
-                    "Quiero reclamar el descuento"
-
+                    "What is a bot?",
+                    "Who are you?"
                 ],
-
-                starterPromptFontSize: 14,
-
+                starterPromptFontSize: 15,
                 clearChatOnReload: false,
-
-                sourceDocsTitle: 'Información relacionada:',
-
+                sourceDocsTitle: 'Sources:',
                 renderHTML: true,
-
                 botMessage: {
-
-                    backgroundColor: '#f3f0eb',
-
-                    textColor: '#111111',
-
+                    backgroundColor: '#f7f8ff',
+                    textColor: '#303235',
                     showAvatar: true,
-
-                    avatarSrc: 'https://cdn-icons-png.flaticon.com/512/4712/4712109.png'
-
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
                 },
-
                 userMessage: {
-
-                    backgroundColor: '#b00020',
-
+                    backgroundColor: '#3B81F6',
                     textColor: '#ffffff',
-
                     showAvatar: true,
-
                     avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
-
                 },
-
                 textInput: {
-
-                    placeholder: 'Escribe tu consulta inmobiliaria...',
-
+                    placeholder: 'Type your question',
                     backgroundColor: '#ffffff',
-
-                    textColor: '#111111',
-
-                    sendButtonColor: '#b00020',
-
-                    maxChars: 250,
-
-                    maxCharsWarningMessage: 'Tu mensaje es demasiado largo.',
-
+                    textColor: '#303235',
+                    sendButtonColor: '#3B81F6',
+                    maxChars: 50,
+                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
                     autoFocus: true,
-
-                    sendMessageSound: false,
-
-                    receiveMessageSound: false
-
+                    sendMessageSound: true,
+                    sendSoundLocation: 'send_message.mp3',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: 'receive_message.mp3'
                 },
-
                 feedback: {
-
-                    color: '#b00020'
-
+                    color: '#303235'
                 },
-
                 dateTimeToggle: {
-
                     date: true,
-
                     time: true
-
                 },
-
                 footer: {
-
-                    textColor: '#555555',
-
-                    text: 'Desarrollado para',
-
-                    company: 'MOAI Inmobiliaria',
-
-                    companyLink: 'https://www.inmobiliariamoai.com/'
-
+                    textColor: '#303235',
+                    text: 'Powered by',
+                    company: 'Flowise',
+                    companyLink: 'https://flowiseai.com'
                 }
-
             }
-
         }
-
     })
-
 </script>
-
-</body>
-</html>
